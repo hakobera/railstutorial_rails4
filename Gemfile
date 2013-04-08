@@ -7,6 +7,8 @@ gem 'rails', '4.0.0.beta1'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.13.0'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spring', '0.0.8'
 end
 
 group :test do
