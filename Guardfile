@@ -1,5 +1,14 @@
 # More info at https://github.com/guard/guard#readme
 
+guard 'bundler' do
+  watch('Gemfile')
+end
+
+guard 'rails', spring: true do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
+end
+
 guard 'rspec', all_after_pass: false, spring: true do
 
   watch(%r{^spec/.+_spec\.rb$})
